@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/typography';
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography';
 
 .techSpecs {
   display: flex;
@@ -37,7 +37,7 @@
 
     .techSpecs__specsName,
     .techSpecs__specsValue {
-      @include body-text;
+      @include typography.body-text;
     }
   }
 }

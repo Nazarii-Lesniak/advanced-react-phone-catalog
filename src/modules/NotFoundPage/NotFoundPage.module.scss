@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .notFound {
   &__emptyContent {
@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       flex-direction: row;
       justify-content: space-around;
       text-align: left;
@@ -20,7 +20,7 @@
   &__emptyText {
     color: var(--text-main);
 
-    @include h2;
+    @include typography.h2;
   }
 
   &__emptyImage {
@@ -37,9 +37,9 @@
 
     cursor: pointer;
 
-    @include hover-transition(color);
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-secondary);
     }
   }

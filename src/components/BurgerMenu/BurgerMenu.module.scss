@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
 
 .burger {
   position: fixed;
@@ -24,7 +24,7 @@
     visibility: visible;
   }
 
-  @include respond-to('tablet') {
+  @include mixins.respond-to('tablet') {
     display: none;
   }
 
@@ -88,7 +88,7 @@
 
       transform-origin: left;
 
-      @include hover-transition;
+      @include mixins.hover-transition;
     }
 
     &.active {

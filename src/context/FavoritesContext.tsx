@@ -9,13 +9,13 @@ import {
 } from 'react';
 import { CatalogProducts } from '../types/Types';
 
-interface FavouritesContextI {
+interface FavouriteContextI {
   favourites: CatalogProducts[];
   toggleFavourite: (product: CatalogProducts) => void;
   isFavourite: (productId: CatalogProducts['id']) => boolean;
 }
 
-export const FavouritesContext = createContext<FavouritesContextI | undefined>(
+export const FavouritesContext = createContext<FavouriteContextI | undefined>(
   undefined,
 );
 

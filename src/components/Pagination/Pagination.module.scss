@@ -1,7 +1,7 @@
 /* src/components/Pagination/Pagination.module.scss */
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .pagination {
   display: flex;
@@ -13,7 +13,7 @@
     padding-bottom: 64px;
     margin: 0;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       padding-bottom: 80px;
     }
   }
@@ -28,7 +28,7 @@
     }
 
     button {
-      @include body-text;
+      @include typography.body-text;
 
       display: flex;
       align-items: center;
@@ -40,14 +40,14 @@
       background-color: transparent;
       cursor: pointer;
 
-      @include hover-transition;
+      @include mixins.hover-transition;
 
       &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
       }
 
-      @include hover {
+      @include mixins.hover {
         &:not(:disabled) {
           border-color: var(--accent);
         }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PathType } from '../../types/Types';
-import noFoundPageImage from '../../../public/img/page-not-found.png';
+import notFoundPageImage from '../../assets/img/page-not-found.png';
 import styles from './NotFoundPage.module.scss';
 
 export const NotFoundPage: React.FC = () => {
@@ -10,7 +10,7 @@ export const NotFoundPage: React.FC = () => {
       <div className={styles.notFound__emptyContent}>
         <h2 className={styles.notFound__emptyText}>Page not found</h2>
         <img
-          src={noFoundPageImage}
+          src={notFoundPageImage}
           alt="No found page"
           className={styles.notFound__emptyImage}
         />

@@ -1,6 +1,6 @@
-@import '../../../styles/variables';
-@import '../../../styles/typography';
-@import '../../../styles/mixins';
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography';
+@use '../../../styles/mixins';
 
 .cart {
   &__item {
@@ -12,7 +12,7 @@
     background-color: var(--card-bg);
     border: 1px solid var(--border);
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       flex-direction: row;
       align-items: center;
       padding: 24px;
@@ -26,7 +26,7 @@
     gap: 16px;
     width: 100%;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       gap: 24px;
       flex-grow: 1;
       width: auto;
@@ -38,7 +38,7 @@
     height: 80px;
     object-fit: contain;
 
-    @include hover-image-scale;
+    @include mixins.hover-image-scale;
   }
 
   &__buttonDelete {
@@ -51,9 +51,9 @@
     border: none;
     cursor: pointer;
 
-    @include hover-transition(color);
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
   }
@@ -61,10 +61,10 @@
   &__itemTitle {
     color: var(--text-main);
 
-    @include body-text;
-    @include hover-transition(color);
+    @include typography.body-text;
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-secondary);
     }
   }
@@ -99,9 +99,9 @@
     border: 1px solid var(--border);
     cursor: pointer;
 
-    @include hover-transition(border-color);
+    @include mixins.hover-transition(border-color);
 
-    @include hover {
+    @include mixins.hover {
       border-color: var(--text-main);
     }
 
@@ -118,7 +118,7 @@
     text-align: center;
     color: var(--text-main);
 
-    @include body-text;
+    @include typography.body-text;
   }
 
   &__price {
@@ -127,6 +127,6 @@
     width: 100px;
     text-align: right;
 
-    @include h3;
+    @include typography.h3;
   }
 }

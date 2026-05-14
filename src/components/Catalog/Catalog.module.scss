@@ -1,13 +1,13 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .catalog {
   margin-top: 24px;
   row-gap: 24px;
 
-  @include page-container;
-  @include page-grid;
+  @include mixins.page-container;
+  @include mixins.page-grid;
 
   &__header,
   &__controls,
@@ -30,7 +30,7 @@
   &__count {
     color: var(--text-secondary);
 
-    @include body-text;
+    @include typography.body-text;
   }
 
   &__controls {
@@ -38,13 +38,13 @@
     margin-bottom: 24px;
     gap: 16px;
 
-    @include page-grid;
+    @include mixins.page-grid;
   }
 
   &__dropdown {
     grid-column: span 2;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       &:first-child {
         grid-column: span 4;
       }
@@ -53,7 +53,7 @@
       }
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       &:first-child {
         grid-column: span 4;
       }
@@ -70,7 +70,7 @@
     justify-content: center;
     margin-top: 24px;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       margin-top: 40px;
     }
   }
@@ -82,7 +82,7 @@
     align-items: center;
     justify-content: center;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       flex-direction: row;
       justify-content: space-around;
       text-align: left;
@@ -92,7 +92,7 @@
   &__emptyText {
     color: var(--text-main);
 
-    @include h2;
+    @include typography.h2;
   }
 
   &__emptyImage {

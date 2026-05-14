@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/typography';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/typography';
+@use '../../styles/mixins';
 
 .header {
   width: 100%;
@@ -18,7 +18,7 @@
     background-color: var(--page-bg);
     border-bottom: 1px solid var(--border);
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       height: 64px;
     }
   }
@@ -37,9 +37,9 @@
     text-decoration: none;
     flex-shrink: 0;
 
-    @include hover-image-scale;
+    @include mixins.hover-image-scale;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       padding-left: 32px;
     }
   }
@@ -47,13 +47,13 @@
   &__nav {
     display: none;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       display: flex;
       margin-right: auto;
       padding-left: 16px;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       padding-left: 24px;
     }
   }
@@ -62,7 +62,7 @@
     display: none;
     flex-shrink: 0;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       display: flex;
       height: 100%;
     }
@@ -80,7 +80,7 @@
     color: var(--text-main);
     box-sizing: border-box;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       width: 64px;
     }
 
@@ -95,7 +95,7 @@
       transform: scaleX(0);
       transform-origin: left;
 
-      @include hover-transition;
+      @include mixins.hover-transition;
     }
 
     &.active {
@@ -108,7 +108,7 @@
   }
 
   &__icon {
-    @include hover-image-scale;
+    @include mixins.hover-image-scale;
   }
 
   &__menu {
@@ -125,7 +125,7 @@
     cursor: pointer;
     padding: 0;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       display: none;
     }
   }
@@ -137,13 +137,13 @@
     box-sizing: border-box;
     margin-left: auto;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       width: 64px;
     }
   }
 
   &__top &__themeToggleMobile {
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       display: none;
     }
   }

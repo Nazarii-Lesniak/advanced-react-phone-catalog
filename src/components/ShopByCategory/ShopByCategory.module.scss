@@ -1,13 +1,13 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .category {
   margin-bottom: 56px;
 
-  @include page-container;
+  @include mixins.page-container;
 
-  @include respond-to('desktop') {
+  @include mixins.respond-to('desktop') {
     margin-bottom: 80px;
   }
 
@@ -15,23 +15,23 @@
     color: var(--text-main);
     margin-bottom: 24px;
 
-    @include h2;
+    @include typography.h2;
   }
 
   &__items {
     gap: 32px;
 
-    @include page-grid;
+    @include mixins.page-grid;
   }
 
   &__item {
     grid-column: span 4;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       grid-column: span 4;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       grid-column: span 8;
     }
   }
@@ -59,7 +59,7 @@
     position: absolute;
     object-fit: contain;
 
-    @include hover-image-scale;
+    @include mixins.hover-image-scale;
   }
 
   &__imageLink--phones &__image {
@@ -93,13 +93,13 @@
     color: var(--text-main);
     margin-bottom: 4px;
 
-    @include h4;
+    @include typography.h4;
   }
 
   &__quantity {
     color: var(--text-secondary);
     display: block;
 
-    @include body-text;
+    @include typography.body-text;
   }
 }

@@ -1,6 +1,6 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
-@import '../../../styles/typography';
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins';
+@use '../../../styles/typography';
 
 .capacitySelector {
   padding-bottom: 24px;
@@ -13,7 +13,7 @@
   }
 
   &__availableCapacity {
-    @include small-text;
+    @include typography.small-text;
 
     color: var(--text-secondary);
   }
@@ -25,7 +25,7 @@
   }
 
   &__label {
-    @include body-text;
+    @include typography.body-text;
 
     display: flex;
     align-items: center;
@@ -41,9 +41,9 @@
     color: var(--text-main);
     cursor: pointer;
 
-    @include hover-transition(border-color);
+    @include mixins.hover-transition(border-color);
 
-    @include hover {
+    @include mixins.hover {
       border-color: var(--text-main);
     }
 
@@ -55,10 +55,10 @@
   }
 
   &__radio {
-    @include radio-hidden;
+    @include mixins.page-container;
   }
 
   &__visuallyHidden {
-    @include visually-hidden;
+    @include mixins.page-container;
   }
 }

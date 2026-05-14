@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/typography';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/typography';
+@use '../../styles/mixins';
 
 .footer {
   width: 100%;
@@ -13,9 +13,9 @@
     flex-direction: column;
     gap: 32px;
 
-    @include page-container;
+    @include mixins.page-container;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
@@ -35,13 +35,13 @@
     gap: 16px;
     padding: 0;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       flex-direction: row;
       align-items: center;
       gap: 13.5px;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       gap: 107px;
     }
   }
@@ -51,10 +51,10 @@
     color: var(--text-secondary);
     text-decoration: none;
 
-    @include uppercase-label;
-    @include hover-transition(color);
+    @include typography.uppercase-label;
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
   }
@@ -62,10 +62,10 @@
   &__backText {
     color: var(--text-secondary);
 
-    @include small-text;
-    @include hover-transition(color);
+    @include typography.small-text;
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
   }
@@ -80,7 +80,7 @@
     box-sizing: border-box;
     padding: 8px;
 
-    @include hover-transition(border-color);
+    @include mixins.hover-transition(border-color);
 
     &:hover {
       border-color: var(--text-main);
@@ -102,7 +102,7 @@
     gap: 16px;
     height: auto;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       margin: 0;
     }
 

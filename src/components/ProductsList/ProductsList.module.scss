@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .list {
   gap: 16px;
@@ -9,21 +9,21 @@
   padding: 0;
   margin: 0;
 
-  @include page-grid;
+  @include mixins.page-grid;
 }
 
 .item {
   grid-column: span 4;
 
-  @include respond-to('tablet') {
+  @include mixins.respond-to('tablet') {
     grid-column: span 6;
   }
 
-  @include respond-to('tablet-md') {
+  @include mixins.respond-to('tablet-md') {
     grid-column: span 4;
   }
 
-  @include respond-to('desktop') {
+  @include mixins.respond-to('desktop') {
     grid-column: span 6;
   }
 }

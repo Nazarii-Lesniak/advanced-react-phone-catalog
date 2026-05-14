@@ -1,6 +1,6 @@
-@import '../../../styles/variables';
-@import '../../../styles/typography';
-@import '../../../styles/mixins';
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography';
+@use '../../../styles/mixins';
 
 .cart {
   &__total {
@@ -25,7 +25,7 @@
     color: var(--text-main);
     text-align: center;
 
-    @include h2;
+    @include typography.h2;
   }
 
   &__totalQuantity {
@@ -33,7 +33,7 @@
     text-align: center;
     font-weight: 600;
 
-    @include body-text;
+    @include typography.body-text;
   }
 
   &__totalDivider {
@@ -44,7 +44,7 @@
     background-color: var(--border);
     border: none;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       margin: 24px 0;
     }
   }
@@ -59,10 +59,10 @@
     background-color: var(--btn-bg);
     cursor: pointer;
 
-    @include button-text;
-    @include hover-transition(all);
+    @include typography.button-text;
+    @include mixins.hover-transition(all);
 
-    @include hover {
+    @include mixins.hover {
       filter: brightness(1.2);
       box-shadow: 0 3px 13px 0 rgba(23, 32, 49, 0.4);
     }

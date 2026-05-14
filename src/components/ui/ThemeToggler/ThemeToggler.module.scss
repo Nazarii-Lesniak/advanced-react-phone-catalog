@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins';
 
 .toggler {
   display: flex;
@@ -17,17 +17,17 @@
 
   box-sizing: border-box;
 
-  @include hover-transition(color);
+  @include mixins.hover-transition(color);
 
-  @include hover {
+  @include mixins.hover {
     color: var(--accent);
   }
 
-  @include respond-to('desktop') {
+  @include mixins.respond-to('desktop') {
     width: 64px;
   }
 
   &__icon {
-    @include hover-image-scale;
+    @include mixins.hover-image-scale;
   }
 }

@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/typography';
-@import '../../styles/mixins';
+@use '../../styles/variables' as *;
+@use '../../styles/typography';
+@use '../../styles/mixins';
 
 .nav {
   &__list {
@@ -10,15 +10,12 @@
     height: 100%;
     padding: 0;
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       gap: 64px;
     }
   }
 
   &__link {
-    @include uppercase-label;
-    @include hover-transition(color);
-
     position: relative;
     display: flex;
     align-items: center;
@@ -27,7 +24,10 @@
     text-decoration: none;
     box-sizing: border-box;
 
-    @include respond-to('desktop') {
+    @include typography.uppercase-label;
+    @include mixins.hover-transition(color);
+
+    @include mixins.respond-to('desktop') {
       height: 64px;
     }
 
@@ -43,7 +43,7 @@
       transform: scaleX(0);
       transform-origin: left;
 
-      @include hover-transition;
+      @include mixins.hover-transition;
     }
 
     &.active {
@@ -54,7 +54,7 @@
       }
     }
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
   }

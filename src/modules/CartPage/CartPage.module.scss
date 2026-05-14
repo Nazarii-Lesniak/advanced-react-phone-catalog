@@ -1,15 +1,15 @@
-@import '../../styles/variables';
-@import '../../styles/typography';
-@import '../../styles/mixins';
-@import '../../styles/fonts';
+@use '../../styles/variables' as *;
+@use '../../styles/typography';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
 
 .cart {
   padding-bottom: 64px;
 
-  @include page-container;
-  @include page-grid;
+  @include mixins.page-container;
+  @include mixins.page-grid;
 
-  @include respond-to('desktop') {
+  @include mixins.respond-to('desktop') {
     padding-bottom: 80px;
   }
 
@@ -27,10 +27,10 @@
     color: var(--text-secondary);
     cursor: pointer;
 
-    @include hover-transition(color);
-    @include small-text;
+    @include typography.small-text;
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
   }
@@ -40,9 +40,9 @@
     color: var(--text-main);
     grid-column: 1 / -1;
 
-    @include h1;
+    @include typography.h1;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       margin-top: 16px;
     }
   }
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       flex-direction: row;
       justify-content: space-around;
       text-align: left;
@@ -64,7 +64,7 @@
   &__emptyText {
     color: var(--text-main);
 
-    @include h2;
+    @include typography.h2;
   }
 
   &__emptyImage {
@@ -80,11 +80,11 @@
     gap: 16px;
     grid-column: span 4;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       grid-column: span 12;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       grid-column: span 16;
     }
   }
@@ -92,11 +92,11 @@
   &__summary {
     grid-column: span 4;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       grid-column: span 12;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       grid-column: span 8;
     }
   }

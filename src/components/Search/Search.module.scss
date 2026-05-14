@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .search {
   position: relative;
@@ -11,7 +11,7 @@
   margin: 0 8px;
 
   &__input {
-    @include body-text;
+    @include typography.body-text;
 
     width: 100%;
     height: 40px;
@@ -21,7 +21,7 @@
     color: var(--text-main);
     outline: none;
 
-    @include hover-transition(border-color);
+    @include mixins.hover-transition(border-color);
 
     &::placeholder {
       color: var(--text-secondary);
@@ -47,12 +47,12 @@
     cursor: pointer;
     color: var(--text-secondary);
 
-    @include hover-transition(color, transform);
+    @include mixins.hover-transition(color, transform);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
 
-    @include hover-image-scale;
+    @include mixins.hover-image-scale;
   }
 }

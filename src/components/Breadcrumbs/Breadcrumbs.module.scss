@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@import '../../styles/mixins';
-@import '../../styles/typography';
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
 
 .breadcrumbs {
   margin-top: 24px;
@@ -10,7 +10,7 @@
   gap: 8px;
   grid-column: 1 / -1;
 
-  @include respond-to('tablet') {
+  @include mixins.respond-to('tablet') {
     margin-bottom: 40px;
   }
 
@@ -20,23 +20,23 @@
     flex-shrink: 0;
     color: var(--text-main);
 
-    @include hover-transition(color);
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--icon-color);
     }
   }
 
   &__link {
-    @include small-text;
+    @include typography.small-text;
 
     font-weight: 600;
     color: var(--text-main);
     text-decoration: none;
 
-    @include hover-transition(color);
+    @include mixins.hover-transition(color);
 
-    @include hover {
+    @include mixins.hover {
       color: var(--text-main);
     }
 
@@ -54,7 +54,7 @@
 
   &__link,
   &__current {
-    @include small-text;
+    @include typography.small-text;
 
     font-weight: 600;
     color: var(--text-secondary);

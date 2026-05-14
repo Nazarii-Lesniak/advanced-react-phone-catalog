@@ -1,5 +1,5 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins';
 
 .gallery {
   display: flex;
@@ -7,7 +7,7 @@
   gap: 16px;
   width: 100%;
 
-  @include respond-to('tablet') {
+  @include mixins.respond-to('tablet') {
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
@@ -19,13 +19,13 @@
     gap: 8px;
     width: 100%;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       grid-template-columns: 1fr;
       width: 35px;
       flex-shrink: 0;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       width: 80px;
       gap: 16px;
     }
@@ -41,19 +41,19 @@
       border: 1px solid var(--border);
       cursor: pointer;
 
-      @include hover-transition(border-color);
+      @include mixins.hover-transition(border-color);
 
-      @include hover {
+      @include mixins.hover {
         border-color: var(--icon-color);
       }
 
-      @include respond-to('tablet') {
+      @include mixins.respond-to('tablet') {
         aspect-ratio: 1 / 1;
         object-fit: contain;
         padding: 2px;
       }
 
-      @include respond-to('desktop') {
+      @include mixins.respond-to('desktop') {
         padding: 7px;
       }
     }
@@ -71,13 +71,13 @@
     margin: 0 auto;
     object-fit: contain;
 
-    @include respond-to('tablet') {
+    @include mixins.respond-to('tablet') {
       max-width: 287px;
       max-height: 287px;
       margin: 0;
     }
 
-    @include respond-to('desktop') {
+    @include mixins.respond-to('desktop') {
       max-width: 464px;
       max-height: 464px;
     }
