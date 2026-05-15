@@ -64,23 +64,21 @@
 
   &__imageLink--phones &__image {
     scale: 1.1;
-    top: 5%;
-    left: 13%;
-    width: 105%;
-    height: 124%;
+    top: 20%;
+    left: 20%;
   }
 
   &__imageLink--tablets &__image {
     scale: 1.5;
-    left: 30%;
-    width: 150%;
+    top: 15%;
+    left: 35%;
     height: 160%;
   }
 
   &__imageLink--accessories &__image {
     scale: 2;
-    top: 20%;
-    left: 55%;
+    top: 40%;
+    left: 30%;
     width: 95%;
     height: 75%;
   }

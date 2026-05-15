@@ -9,7 +9,7 @@ import { getPaginatedProducts, getSortedProducts } from '../../utils/helpers';
 import { Dropdown } from '../ui/Dropdown';
 import { PER_PAGE_OPTIONS, SORT_OPTIONS } from '../../constants';
 import { Breadcrumbs } from '../Breadcrumbs';
-import noProductsMatching from '../../assets/img/product-not-found.png';
+import noProductsMatching from '../../assets/img/product-not-found.webp';
 import styles from './Catalog.module.scss';
 
 const EMPTY_MESSAGES: Record<string, string> = {

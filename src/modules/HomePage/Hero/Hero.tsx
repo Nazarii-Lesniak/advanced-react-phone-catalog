@@ -6,13 +6,12 @@ import classNames from 'classnames';
 import styles from './Hero.module.scss';
 
 const banners = [
-  'img/banner-accessories.png',
-  'img/banner-phones.png',
-  'img/banner-tablets.png',
-  'img/banner-1.jpg',
-  'img/banner-2.jpg',
-  'img/banner-3.jpg',
-  'img/banner-4.jpg',
+  'img/banner-accessories.webp',
+  'img/banner-phones.webp',
+  'img/banner-tablets.webp',
+  'img/banner-1.webp',
+  'img/banner-2.webp',
+  'img/banner-3.webp',
 ];
 
 export const Hero: React.FC = () => {
