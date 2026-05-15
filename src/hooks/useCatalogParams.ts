@@ -22,7 +22,7 @@ export const useCatalogParams = () => {
     ? perPageParam === PerPageType.ALL
       ? PerPageType.ALL
       : Number(perPageParam)
-    : PerPageType.ALL;
+    : PerPageType.SIXTEEN;
 
   const handleSortChange = useCallback(
     (newSort: string) => {
