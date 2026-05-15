@@ -9,12 +9,6 @@
   }
 }
 
-@mixin hover-transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
-  & {
-    transition: $property $duration $timing;
-  }
-}
-
 @mixin hover {
   @media (hover: hover) {
     &:hover {
@@ -24,7 +18,7 @@
 }
 
 @mixin hover-image-scale {
-  @include hover-transition(transform);
+  transition: transform $transition-base;
 
   @include respond-to('desktop') {
     @media (hover: hover) {

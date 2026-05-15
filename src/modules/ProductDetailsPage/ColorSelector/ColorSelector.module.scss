@@ -33,7 +33,7 @@
     box-shadow: inset 0 0 0 2px #fff;
     cursor: pointer;
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     @include mixins.hover {
       border-color: var(--icon-color);
@@ -58,10 +58,10 @@
   }
 
   &__radio {
-    @include mixins.page-container;
+    @include mixins.visually-hidden;
   }
 
   &__visuallyHidden {
-    @include mixins.page-container;
+    @include mixins.visually-hidden;
   }
 }

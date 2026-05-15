@@ -41,7 +41,7 @@
       border: 1px solid var(--border);
       cursor: pointer;
 
-      @include mixins.hover-transition(border-color);
+      transition: border-color $transition-base;
 
       @include mixins.hover {
         border-color: var(--icon-color);

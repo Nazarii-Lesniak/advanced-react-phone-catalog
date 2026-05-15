@@ -26,6 +26,8 @@
     width: 89px;
     height: 32px;
     display: block;
+
+    @include mixins.hover-image-scale;
   }
 
   &__list {
@@ -51,8 +53,9 @@
     color: var(--text-secondary);
     text-decoration: none;
 
+    transition: color $transition-base;
+
     @include typography.uppercase-label;
-    @include mixins.hover-transition(color);
 
     @include mixins.hover {
       color: var(--text-main);
@@ -63,7 +66,8 @@
     color: var(--text-secondary);
 
     @include typography.small-text;
-    @include mixins.hover-transition(color);
+
+    transition: color $transition-base;
 
     @include mixins.hover {
       color: var(--text-main);
@@ -79,8 +83,9 @@
     border: 1px solid var(--border);
     box-sizing: border-box;
     padding: 8px;
+    color: var(--text-main);
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     &:hover {
       border-color: var(--text-main);

@@ -30,7 +30,7 @@
     border: 1px solid var(--border);
     cursor: pointer;
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     @include mixins.hover {
       border-color: var(--text-main);
@@ -74,9 +74,9 @@
     visibility: hidden;
     transform: translateY(-10px);
     transition:
-      opacity 0.3s ease,
-      transform 0.3s ease,
-      visibility 0.3s;
+      opacity $transition-base,
+      transform $transition-base,
+      visibility $transition-base;
   }
 
   &__listVisible {
@@ -96,7 +96,9 @@
     color: var(--text-secondary);
     cursor: pointer;
 
-    @include mixins.hover-transition(all, 0.3s);
+    transition:
+      background-color $transition-base,
+      color $transition-base;
 
     @include mixins.hover {
       background-color: var(--hover-bg);

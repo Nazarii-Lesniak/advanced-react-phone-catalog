@@ -60,7 +60,8 @@
     cursor: pointer;
 
     @include typography.button-text;
-    @include mixins.hover-transition(all);
+
+    transition: filter $transition-base, box-shadow $transition-base;
 
     @include mixins.hover {
       filter: brightness(1.2);

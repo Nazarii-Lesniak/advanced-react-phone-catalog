@@ -24,8 +24,9 @@
     text-decoration: none;
     box-sizing: border-box;
 
+    transition: color $transition-base;
+
     @include typography.uppercase-label;
-    @include mixins.hover-transition(color);
 
     @include mixins.respond-to('desktop') {
       height: 64px;
@@ -43,7 +44,7 @@
       transform: scaleX(0);
       transform-origin: left;
 
-      @include mixins.hover-transition;
+      transition: transform $transition-base;
     }
 
     &.active {

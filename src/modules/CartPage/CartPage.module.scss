@@ -28,7 +28,8 @@
     cursor: pointer;
 
     @include typography.small-text;
-    @include mixins.hover-transition(color);
+
+    transition: color $transition-base;
 
     @include mixins.hover {
       color: var(--text-main);

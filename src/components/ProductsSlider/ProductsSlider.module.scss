@@ -45,7 +45,7 @@
     cursor: pointer;
     color: var(--text-main);
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     @include mixins.hover {
       border-color: var(--text-main);

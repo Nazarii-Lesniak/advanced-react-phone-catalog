@@ -40,7 +40,11 @@
       background-color: transparent;
       cursor: pointer;
 
-      @include mixins.hover-transition;
+      transition:
+        opacity $transition-base,
+        border-color $transition-base,
+        color $transition-base,
+        background-color $transition-base;
 
       &:disabled {
         opacity: 0.5;

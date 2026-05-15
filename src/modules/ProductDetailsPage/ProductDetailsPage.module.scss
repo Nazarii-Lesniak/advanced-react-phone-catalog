@@ -28,8 +28,9 @@
     color: var(--text-secondary);
     cursor: pointer;
 
+    transition: color $transition-base;
+
     @include typography.small-text;
-    @include mixins.hover-transition(color);
 
     @include mixins.hover {
       color: var(--text-main);
@@ -123,7 +124,11 @@
     cursor: pointer;
 
     @include typography.button-text;
-    @include mixins.hover-transition(all);
+
+    transition:
+      background-color $transition-base,
+      color $transition-base,
+      border-color $transition-base;
 
     &--active {
       background-color: var(--page-bg);
@@ -151,7 +156,7 @@
     border: 1px solid var(--icon-color);
     cursor: pointer;
 
-    @include mixins.hover-transition(all);
+    transition: border-color $transition-base;
 
     @include mixins.hover {
       border-color: var(--text-main);

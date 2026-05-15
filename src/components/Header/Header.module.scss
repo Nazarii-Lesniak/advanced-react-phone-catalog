@@ -95,7 +95,9 @@
       transform: scaleX(0);
       transform-origin: left;
 
-      @include mixins.hover-transition;
+      transition:
+        transform $transition-base,
+        color $transition-base;
     }
 
     &.active {

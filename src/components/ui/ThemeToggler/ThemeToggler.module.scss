@@ -17,7 +17,7 @@
 
   box-sizing: border-box;
 
-  @include mixins.hover-transition(color);
+  transition: color $transition-base;
 
   @include mixins.hover {
     color: var(--accent);

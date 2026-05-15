@@ -51,7 +51,7 @@
     border: none;
     cursor: pointer;
 
-    @include mixins.hover-transition(color);
+    transition: color $transition-base;
 
     @include mixins.hover {
       color: var(--text-main);
@@ -62,7 +62,8 @@
     color: var(--text-main);
 
     @include typography.body-text;
-    @include mixins.hover-transition(color);
+
+    transition: color $transition-base;
 
     @include mixins.hover {
       color: var(--text-secondary);
@@ -99,7 +100,7 @@
     border: 1px solid var(--border);
     cursor: pointer;
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     @include mixins.hover {
       border-color: var(--text-main);

@@ -20,7 +20,7 @@
     flex-shrink: 0;
     color: var(--text-main);
 
-    @include mixins.hover-transition(color);
+    transition: color $transition-base;
 
     @include mixins.hover {
       color: var(--icon-color);
@@ -34,7 +34,7 @@
     color: var(--text-main);
     text-decoration: none;
 
-    @include mixins.hover-transition(color);
+    transition: color $transition-base;
 
     @include mixins.hover {
       color: var(--text-main);

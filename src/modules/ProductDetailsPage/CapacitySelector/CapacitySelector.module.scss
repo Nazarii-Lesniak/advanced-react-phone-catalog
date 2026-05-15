@@ -41,7 +41,7 @@
     color: var(--text-main);
     cursor: pointer;
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     @include mixins.hover {
       border-color: var(--text-main);
@@ -55,10 +55,10 @@
   }
 
   &__radio {
-    @include mixins.page-container;
+    @include mixins.visually-hidden;
   }
 
   &__visuallyHidden {
-    @include mixins.page-container;
+    @include mixins.visually-hidden;
   }
 }

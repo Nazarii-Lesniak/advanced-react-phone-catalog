@@ -21,7 +21,7 @@
     color: var(--text-main);
     outline: none;
 
-    @include mixins.hover-transition(border-color);
+    transition: border-color $transition-base;
 
     &::placeholder {
       color: var(--text-secondary);
@@ -47,12 +47,14 @@
     cursor: pointer;
     color: var(--text-secondary);
 
-    @include mixins.hover-transition(color, transform);
+    transition:
+      color $transition-base,
+      transform $transition-base;
+
+    @include mixins.hover-image-scale;
 
     @include mixins.hover {
       color: var(--text-main);
     }
-
-    @include mixins.hover-image-scale;
   }
 }
