@@ -1,1 +1,0 @@
-import{j as s,h as n}from"./index-ypSbDzk2.js";const r="_list_100nn_28",l="_item_100nn_50",i={list:r,item:l},a=({products:e})=>s.jsx("ul",{className:i.list,children:e.map(t=>s.jsx("li",{className:i.item,children:s.jsx(n,{product:t})},t.id))});export{a as P};
