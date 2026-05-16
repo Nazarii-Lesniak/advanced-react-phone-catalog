@@ -1,7 +1,8 @@
 {
-  "homepage": ".",
+  "homepage": "https://nazarii-lesniak.github.io/advanced-react-phone-catalog/",
   "name": "nice-gadgets",
   "version": "0.1.0",
+  "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bulma": "^1.0.1",
