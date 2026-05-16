@@ -1,6 +1,8 @@
 @use '../../../styles/variables' as *;
 
 .fadeIn {
+  flex-grow: 1;
+
   animation: fade-in-animation $transition-base forwards;
   opacity: 0;
 }
