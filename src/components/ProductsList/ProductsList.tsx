@@ -10,10 +10,10 @@ interface ProductsListProps {
 export const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   return (
     <ul className={styles.list}>
-      {products.map(product => {
+      {products.map((product, index) => {
         return (
           <li key={product.id} className={styles.item}>
-            <ProductCard product={product} />
+            <ProductCard product={product} isPriority={index < 4} />
           </li>
         );
       })}
