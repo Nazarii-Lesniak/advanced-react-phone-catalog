@@ -62,6 +62,8 @@ export const Hero: React.FC = () => {
                 src={banner}
                 alt={`Banner ${index + 1}`}
                 className={styles.hero__image}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'low'}
               />
             ))}
           </div>

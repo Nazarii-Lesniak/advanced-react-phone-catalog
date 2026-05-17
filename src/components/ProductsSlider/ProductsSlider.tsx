@@ -57,9 +57,9 @@ export const ProductsSlider: React.FC<ProductSliderProps> = ({
         ref={listRef}
         onScroll={checkScrollPosition}
       >
-        {visibleProducts.map(product => (
+        {visibleProducts.map((product, index) => (
           <div key={product.id} className={styles.slider__item}>
-            <ProductCard product={product} />
+            <ProductCard product={product} isPriority={index < 4} />
           </div>
         ))}
       </div>

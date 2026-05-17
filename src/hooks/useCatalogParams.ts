@@ -44,7 +44,7 @@ export const useCatalogParams = () => {
     (newPerPage: string) => {
       const newParams = new URLSearchParams(searchParams);
 
-      if (newPerPage === PerPageType.ALL) {
+      if (newPerPage === PerPageType.SIXTEEN) {
         newParams.delete('perPage');
       } else {
         newParams.set('perPage', newPerPage);

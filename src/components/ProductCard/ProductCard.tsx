@@ -10,9 +10,13 @@ import styles from './ProductCard.module.scss';
 
 interface ProductCardProps {
   product: CatalogProducts;
+  isPriority?: boolean;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  isPriority = false,
+}) => {
   const { addToCart, isInCart } = useCart();
   const { toggleFavourite, isFavourite } = useFavourites();
 
@@ -42,7 +46,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <article className={styles.productCard}>
       <Link to={productLink} className={styles.productCard__imageLink}>
-        <img src={image} alt={name} className={styles.productCard__image} />
+        <img
+          src={image}
+          alt={name}
+          className={styles.productCard__image}
+          loading={isPriority ? 'eager' : 'lazy'}
+        />
       </Link>
       <h3 className={styles.productCard__title}>
         <Link to={productLink} className={styles.productCard__titleLink}>
