@@ -28,8 +28,10 @@
 
   &__viewport {
     width: 100%;
-    height: 320px;
     overflow: hidden;
+
+    aspect-ratio: 24 / 10;
+    height: 320px;
 
     @include mixins.respond-to('desktop') {
       height: 400px;

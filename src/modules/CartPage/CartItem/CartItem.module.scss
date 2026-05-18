@@ -38,6 +38,8 @@
     height: 80px;
     object-fit: contain;
 
+    aspect-ratio: 1 / 1;
+
     @include mixins.hover-image-scale;
   }
 
