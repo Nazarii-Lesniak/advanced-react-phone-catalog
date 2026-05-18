@@ -39,9 +39,14 @@ export const Hero: React.FC = () => {
   });
 
   return (
-    <section className={styles.hero}>
+    <section
+      className={styles.hero}
+      aria-roledescription="carousel"
+      aria-label="Promotional banners"
+    >
       <div className={styles.hero__main}>
         <button
+          type="button"
           className={classNames(
             styles.hero__button,
             styles['hero__button--prev'],
@@ -69,24 +74,31 @@ export const Hero: React.FC = () => {
           </div>
         </div>
         <button
+          type="button"
           className={classNames(
             styles.hero__button,
             styles['hero__button--next'],
           )}
           onClick={handleNextBanner}
-          aria-label="Next slide"
+          aria-label="Next banner"
         >
           <ArrowRightIcon />
         </button>
       </div>
-      <div className={styles.hero__pagination}>
+      <div
+        className={styles.hero__pagination}
+        role="tablist"
+        aria-label="Banner selection"
+      >
         {banners.map((_, index) => (
           <button
             key={index}
+            type="button"
             className={classNames(styles.hero__dot, {
               [styles['hero__dot--active']]: index === currentIndex,
             })}
             onClick={() => setCurrentIndex(index)}
+            role="tab"
             aria-label={`Go to banner ${index + 1}`}
           ></button>
         ))}

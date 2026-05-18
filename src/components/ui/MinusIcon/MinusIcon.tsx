@@ -9,6 +9,7 @@ export const MinusIcon: React.FC = () => {
       height="16"
       viewBox="0 0 16 16"
       fill="none"
+      aria-hidden="true"
     >
       <path
         fillRule="evenodd"

@@ -16,16 +16,16 @@ export class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // eslint-disable-next-line no-console
-    console.error('Помилка завантаження чанку:', error, errorInfo);
+    console.error('Chunk loading error:', error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
       return (
-        <div style={{ padding: '40px', textAlign: 'center' }}>
+        <div style={{ padding: '40px', textAlign: 'center' }} role="alert">
           <h2>Oops! Something went wrong.</h2>
           <p>The page could not be loaded. Maybe you lost internet.</p>
-          <button onClick={() => window.location.reload()}>
+          <button onClick={() => window.location.reload()} type="button">
             Refresh the page
           </button>
         </div>

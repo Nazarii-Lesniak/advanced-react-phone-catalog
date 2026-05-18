@@ -13,7 +13,12 @@ export const CartPage: React.FC = () => {
 
   return (
     <div className={styles.cart}>
-      <button onClick={() => navigate(-1)} className={styles.cart__back}>
+      <button
+        type="button"
+        onClick={() => navigate(-1)}
+        className={styles.cart__back}
+        aria-label="Back to previous page"
+      >
         <ArrowLeftIcon />
         Back
       </button>
@@ -24,7 +29,8 @@ export const CartPage: React.FC = () => {
           <h2 className={styles.cart__emptyText}>Your cart is empty</h2>
           <img
             src={cartIsEmpty}
-            alt="Cart is empty"
+            alt=""
+            aria-hidden="true"
             className={styles.cart__emptyImage}
           />
         </div>

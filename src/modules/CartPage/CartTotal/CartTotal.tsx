@@ -30,7 +30,7 @@ export const CartTotal: React.FC = () => {
         </span>
       </div>
 
-      <hr className={styles.cart__totalDivider} />
+      <hr className={styles.cart__totalDivider} aria-hidden="true" />
 
       <button
         type="button"

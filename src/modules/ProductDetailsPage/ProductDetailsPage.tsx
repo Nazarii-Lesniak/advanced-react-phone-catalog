@@ -55,7 +55,11 @@ export const ProductDetailsPage: React.FC = () => {
   return (
     <div className={styles.details}>
       <Breadcrumbs category={product?.category} productName={product?.name} />
-      <button onClick={() => navigate(-1)} className={styles.details__back}>
+      <button
+        type="button"
+        onClick={() => navigate(-1)}
+        className={styles.details__back}
+      >
         <ArrowLeftIcon />
         Back
       </button>
@@ -107,9 +111,15 @@ export const ProductDetailsPage: React.FC = () => {
                     }
                   >
                     {!isActiveFavourite ? (
-                      <FavouriteIcon className={styles.details__icon} />
+                      <FavouriteIcon
+                        className={styles.details__icon}
+                        aria-hidden="true"
+                      />
                     ) : (
-                      <HeartFillIcon className={styles.details__icon} />
+                      <HeartFillIcon
+                        className={styles.details__icon}
+                        aria-hidden="true"
+                      />
                     )}
                   </button>
                 </div>

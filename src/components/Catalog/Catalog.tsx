@@ -77,7 +77,7 @@ export const Catalog: React.FC<CatalogProps> = ({
       {isLoading && <Loader />}
 
       {errorMessage && (
-        <div className={styles.catalog__error}>
+        <div className={styles.catalog__error} role="alert">
           {errorMessage}{' '}
           <button onClick={onReload} type="button">
             Retry
@@ -104,7 +104,8 @@ export const Catalog: React.FC<CatalogProps> = ({
               <h2 className={styles.catalog__emptyText}>{noResultsMessage}</h2>
               <img
                 src={noProductsMatching}
-                alt="No products matching"
+                alt=""
+                aria-hidden="true"
                 className={styles.catalog__emptyImage}
               />
             </div>

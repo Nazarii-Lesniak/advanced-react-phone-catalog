@@ -34,8 +34,10 @@ export const Pagination: React.FC<PaginationProps> = ({
       <ul className={styles.pagination__list}>
         <li className={styles.pagination__item}>
           <button
+            type="button"
             disabled={currentPage === 1}
             onClick={() => onPageChange(currentPage - 1)}
+            aria-label="Previous page"
           >
             <ArrowLeftIcon />
           </button>
@@ -44,8 +46,11 @@ export const Pagination: React.FC<PaginationProps> = ({
           return (
             <li className={styles.pagination__item} key={index}>
               <button
+                type="button"
                 className={currentPage === page ? styles.isActive : ''}
                 onClick={() => onPageChange(page)}
+                aria-current={currentPage === page ? 'page' : undefined}
+                aria-label={`Page ${page}`}
               >
                 {page}
               </button>
@@ -54,8 +59,10 @@ export const Pagination: React.FC<PaginationProps> = ({
         })}
         <li className={styles.pagination__item}>
           <button
+            type="button"
             disabled={currentPage === totalPages}
             onClick={() => onPageChange(currentPage + 1)}
+            aria-label="Next page"
           >
             <ArrowRightIcon />
           </button>

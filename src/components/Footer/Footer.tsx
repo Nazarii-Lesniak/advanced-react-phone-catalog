@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
       <div className={styles.footer__content}>
         <Logo className={styles.footer__logo} />
 
-        <nav className={styles.footer__nav}>
+        <nav className={styles.footer__nav} aria-label="Footer navigation">
           <ul className={styles.footer__list}>
             <li className={styles.footer__item}>
               <a
@@ -48,6 +48,7 @@ export const Footer: React.FC = () => {
         </nav>
 
         <button
+          type="button"
           className={styles.footer__backButton}
           onClick={handleBackToTop}
           aria-label="Back to top"

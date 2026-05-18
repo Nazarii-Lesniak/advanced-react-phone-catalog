@@ -15,6 +15,7 @@ export const CloseIcon: React.FC<CloseIconProps> = ({ className }) => {
       viewBox="0 0 16 16"
       fill="none"
       className={className}
+      aria-hidden="true"
     >
       <path
         fillRule="evenodd"
