@@ -53,11 +53,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           loading={isPriority ? 'eager' : 'lazy'}
         />
       </Link>
-      <h3 className={styles.productCard__title}>
+      <h2 className={styles.productCard__title}>
         <Link to={productLink} className={styles.productCard__titleLink}>
           {name}
         </Link>
-      </h3>
+      </h2>
       <div className={styles.productCard__priceContainer}>
         <span className={styles.productCard__price}>${price}</span>
         {fullPrice !== price && (
