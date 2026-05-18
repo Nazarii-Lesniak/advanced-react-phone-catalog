@@ -64,7 +64,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           <span className={styles.productCard__fullPrice}>${fullPrice}</span>
         )}
       </div>
-      <hr className={styles.productCard__divider} />
+      <hr className={styles.productCard__divider} aria-hidden="true" />
       <div className={styles.productCard__specsContainer}>
         {specs.map(spec => (
           <div key={spec.name} className={styles.productCard__specs}>

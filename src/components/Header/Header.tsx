@@ -42,7 +42,11 @@ export const Header: React.FC = () => {
     <>
       <header className={styles.header}>
         <div className={styles.header__top}>
-          <Link to={PathType.HOME} className={styles.header__link}>
+          <Link
+            to={PathType.HOME}
+            className={styles.header__link}
+            aria-label="Home page"
+          >
             <Logo className={styles.header__logo} />
           </Link>
 
@@ -50,7 +54,15 @@ export const Header: React.FC = () => {
           <Search />
           <div className={styles.header__actions}>
             <ThemeToggler />
-            <NavLink to={PathType.FAVOURITES} className={getIconLinkClass}>
+            <NavLink
+              to={PathType.FAVOURITES}
+              className={getIconLinkClass}
+              aria-label={
+                favouritesCount > 0
+                  ? `Favorites, ${favouritesCount} items`
+                  : 'Favorites'
+              }
+            >
               <div className={styles.header__iconContainer}>
                 <FavouriteIcon className={styles.header__icon} />
                 {favouritesCount > 0 && (
@@ -60,7 +72,13 @@ export const Header: React.FC = () => {
                 )}
               </div>
             </NavLink>
-            <NavLink to={PathType.CART} className={getIconLinkClass}>
+            <NavLink
+              to={PathType.CART}
+              className={getIconLinkClass}
+              aria-label={
+                cartItemsCount > 0 ? `Cart, ${cartItemsCount} items` : 'Cart'
+              }
+            >
               <div className={styles.header__iconContainer}>
                 <CartIcon className={styles.header__icon} />
                 {cartItemsCount > 0 && (
@@ -73,6 +91,7 @@ export const Header: React.FC = () => {
           </div>
           <ThemeToggler className={styles.header__themeToggleMobile} />
           <button
+            type="button"
             className={styles.header__menu}
             onClick={toggleMenu}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}

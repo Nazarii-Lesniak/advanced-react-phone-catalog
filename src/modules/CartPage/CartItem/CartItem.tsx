@@ -31,6 +31,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
           type="button"
           className={styles.cart__buttonDelete}
           onClick={handleRemove}
+          aria-label={`Remove ${item.product.name} from cart`}
         >
           <CloseIcon />
         </button>
@@ -55,6 +56,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
             className={styles.cart__buttonMinus}
             onClick={handleDecrease}
             disabled={item.quantity === 1}
+            aria-label="Decrease quantity"
           >
             <MinusIcon />
           </button>
@@ -63,6 +65,7 @@ export const CartItem: React.FC<CartItemProps> = ({ item }) => {
             type="button"
             className={styles.cart__buttonPlus}
             onClick={handleIncrease}
+            aria-label="Increase quantity"
           >
             <PlusIcon />
           </button>

@@ -38,16 +38,23 @@ export const Search: React.FC = () => {
         placeholder={`Search in ${location.pathname.replace('/', '')}...`}
         value={localQuery}
         onChange={event => setLocalQuery(event.target.value)}
+        aria-label={`Search in ${location.pathname.replace('/', '')}`}
       />
       {localQuery ? (
         <button
+          type="button"
           className={styles.search__button}
           onClick={() => setLocalQuery('')}
+          aria-label="Clear search"
         >
           <CloseIcon />
         </button>
       ) : (
-        <button className={styles.search__button}>
+        <button
+          type="button"
+          className={styles.search__button}
+          aria-label="Search"
+        >
           <SearchIcon />
         </button>
       )}

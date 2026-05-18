@@ -15,6 +15,7 @@ export const CartIcon: React.FC<CartProps> = ({ className }) => {
       viewBox="0 0 16 16"
       fill="none"
       className={className}
+      aria-hidden="true"
     >
       <path
         fillRule="evenodd"

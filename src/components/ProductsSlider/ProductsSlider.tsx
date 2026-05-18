@@ -37,7 +37,7 @@ export const ProductsSlider: React.FC<ProductSliderProps> = ({
             className={styles.slider__button}
             onClick={() => scroll('left')}
             disabled={!canScrollLeft}
-            aria-label="Scoll left"
+            aria-label="Scroll left"
           >
             <ArrowLeftIcon />
           </button>
@@ -46,7 +46,7 @@ export const ProductsSlider: React.FC<ProductSliderProps> = ({
             className={styles.slider__button}
             onClick={() => scroll('right')}
             disabled={!canScrollRight}
-            aria-label="Scoll right"
+            aria-label="Scroll right"
           >
             <ArrowRightIcon />
           </button>
