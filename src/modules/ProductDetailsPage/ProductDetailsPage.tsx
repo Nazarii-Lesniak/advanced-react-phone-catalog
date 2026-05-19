@@ -57,7 +57,7 @@ export const ProductDetailsPage: React.FC = () => {
       <Breadcrumbs category={product?.category} productName={product?.name} />
       <button
         type="button"
-        onClick={() => navigate(-1)}
+        onClick={() => navigate(`/${product?.category || ''}`)}
         className={styles.details__back}
       >
         <ArrowLeftIcon />
