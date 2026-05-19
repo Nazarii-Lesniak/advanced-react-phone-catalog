@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowLeftIcon } from '../ui/ArrowLeftIcon';
 import { ArrowRightIcon } from '../ui/ArrowRightIcon';
+import { scrollToTop } from '../../utils/helpers';
 import styles from './Pagination.module.scss';
 
 interface PaginationProps {
@@ -36,7 +37,10 @@ export const Pagination: React.FC<PaginationProps> = ({
           <button
             type="button"
             disabled={currentPage === 1}
-            onClick={() => onPageChange(currentPage - 1)}
+            onClick={() => {
+              onPageChange(currentPage - 1);
+              scrollToTop();
+            }}
             aria-label="Previous page"
           >
             <ArrowLeftIcon />
@@ -48,7 +52,10 @@ export const Pagination: React.FC<PaginationProps> = ({
               <button
                 type="button"
                 className={currentPage === page ? styles.isActive : ''}
-                onClick={() => onPageChange(page)}
+                onClick={() => {
+                  onPageChange(page);
+                  scrollToTop();
+                }}
                 aria-current={currentPage === page ? 'page' : undefined}
                 aria-label={`Page ${page}`}
               >
@@ -61,7 +68,10 @@ export const Pagination: React.FC<PaginationProps> = ({
           <button
             type="button"
             disabled={currentPage === totalPages}
-            onClick={() => onPageChange(currentPage + 1)}
+            onClick={() => {
+              onPageChange(currentPage + 1);
+              scrollToTop();
+            }}
             aria-label="Next page"
           >
             <ArrowRightIcon />

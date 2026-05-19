@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { CategoriesType, Category, PathType } from '../../types/Types';
 import { useCategoryCounts } from '../../hooks/useCategoryCounts';
+import { scrollToTop } from '../../utils/helpers';
 import styles from './ShopByCategory.module.scss';
 
 export const ShopByCategory: React.FC = () => {
@@ -44,6 +45,7 @@ export const ShopByCategory: React.FC = () => {
               <NavLink
                 to={category.link}
                 className={`${styles.category__imageLink} ${styles[`category__imageLink--${category.type}`]}`}
+                onClick={scrollToTop}
               >
                 <img
                   src={category.src}

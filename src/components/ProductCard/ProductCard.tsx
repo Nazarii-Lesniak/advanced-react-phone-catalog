@@ -5,6 +5,7 @@ import { CatalogProducts } from '../../types/Types';
 import { HeartFillIcon } from '../ui/HeartFillIcon';
 import { useCart } from '../../context/CartContext';
 import { useFavourites } from '../../context/FavoritesContext';
+import { scrollToTop } from '../../utils/helpers';
 import classNames from 'classnames';
 import styles from './ProductCard.module.scss';
 
@@ -45,7 +46,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   return (
     <article className={styles.productCard}>
-      <Link to={productLink} className={styles.productCard__imageLink}>
+      <Link
+        to={productLink}
+        className={styles.productCard__imageLink}
+        onClick={scrollToTop}
+      >
         <img
           src={image}
           alt={name}
@@ -54,7 +59,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         />
       </Link>
       <h2 className={styles.productCard__title}>
-        <Link to={productLink} className={styles.productCard__titleLink}>
+        <Link
+          to={productLink}
+          className={styles.productCard__titleLink}
+          onClick={scrollToTop}
+        >
           {name}
         </Link>
       </h2>
