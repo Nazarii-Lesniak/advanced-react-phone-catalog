@@ -58,15 +58,9 @@ export const getColorHex = (color: string): string => {
   return colorMap[normalizedColor] || color;
 };
 
-let scrollTimeOut: ReturnType<typeof setTimeout>;
-
 export const scrollToTop = () => {
-  clearTimeout(scrollTimeOut);
-
-  scrollTimeOut = setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }, 10);
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 };
