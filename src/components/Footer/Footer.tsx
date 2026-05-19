@@ -2,12 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Logo } from '../Logo';
 import { ArrowUpIcon } from '../ui/ArrowUpIcon';
+import { CONTACTS, GIT_HUB_REPO, RIGHTS_PATH } from '../../constants';
 import styles from './Footer.module.scss';
-import {
-  CONTACTS_ORIGIN_REPO,
-  GIT_HUB_REPO,
-  RIGHTS_PATH,
-} from '../../constants';
 
 export const Footer: React.FC = () => {
   const handleBackToTop = () => {
@@ -33,14 +29,21 @@ export const Footer: React.FC = () => {
             </li>
             <li className={styles.footer__item}>
               <NavLink
-                to={CONTACTS_ORIGIN_REPO}
+                to={CONTACTS}
                 className={styles.footer__link}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Contacts
               </NavLink>
             </li>
             <li className={styles.footer__item}>
-              <NavLink to={RIGHTS_PATH} className={styles.footer__link}>
+              <NavLink
+                to={RIGHTS_PATH}
+                className={styles.footer__link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Rights
               </NavLink>
             </li>
