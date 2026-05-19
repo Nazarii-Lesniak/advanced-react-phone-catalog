@@ -59,28 +59,32 @@
     position: absolute;
     object-fit: contain;
 
+    width: 100%;
+    height: 100%;
+
     @include mixins.hover-image-scale;
   }
 
   &__imageLink--phones &__image {
     scale: 1.1;
     top: 20%;
-    left: 20%;
+    left: 10%;
   }
 
   &__imageLink--tablets &__image {
+    width: 100%;
+    height: 160%;
     scale: 1.5;
     top: 15%;
     left: 35%;
-    height: 160%;
   }
 
   &__imageLink--accessories &__image {
-    scale: 2;
-    top: 40%;
-    left: 30%;
     width: 95%;
     height: 75%;
+    top: 35%;
+    left: 20%;
+    scale: 1.6;
   }
 
   &__info {
