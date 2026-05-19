@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { PerPageType, SortType } from '../types/Types';
 
 export const SORT_OPTIONS = [
@@ -14,10 +15,10 @@ export const PER_PAGE_OPTIONS = [
 ];
 
 export const RIGHTS_PATH =
-  'https://github.com/Nazarii-Lesniak/react_phone-catalog/blob/master/LICENSE';
+  'https://github.com/Nazarii-Lesniak/advanced-react-phone-catalog?tab=GPL-3.0-1-ov-file';
 
 export const GIT_HUB_REPO =
-  'https://github.com/Nazarii-Lesniak/react_phone-catalog/tree/develop';
+  'https://github.com/Nazarii-Lesniak/advanced-react-phone-catalog';
 
-export const CONTACTS_ORIGIN_REPO =
-  'https://github.com/mate-academy/react_phone-catalog';
+export const CONTACTS =
+  'https://github.com/Nazarii-Lesniak/advanced-react-phone-catalog/blob/main/LICENSE';

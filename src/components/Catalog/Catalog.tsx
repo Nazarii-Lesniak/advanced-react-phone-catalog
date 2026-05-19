@@ -50,11 +50,13 @@ export const Catalog: React.FC<CatalogProps> = ({
       return products;
     }
 
-    const lowerCaseQuery = query.toLowerCase();
+    const words = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
 
-    return products.filter(product =>
-      product.name.toLowerCase().includes(lowerCaseQuery),
-    );
+    return products.filter(product => {
+      const name = product.name.toLowerCase();
+
+      return words.every(word => name.includes(word));
+    });
   }, [products, query]);
 
   const totalPages =
