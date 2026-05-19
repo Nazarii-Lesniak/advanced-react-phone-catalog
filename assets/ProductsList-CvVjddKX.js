@@ -1,0 +1,1 @@
+import{j as s,k as n}from"./index-Db8tcVE8.js";const l="_list_100nn_28",m="_item_100nn_50",i={list:l,item:m},a=({products:r})=>s.jsx("ul",{className:i.list,children:r.map((t,e)=>s.jsx("li",{className:i.item,children:s.jsx(n,{product:t,isPriority:e<4})},t.id))});export{a as P};
