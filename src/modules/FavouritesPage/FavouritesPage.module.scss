@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
+
+.favourites {
+  margin-top: 24px;
+
+  @include mixins.page-container;
+
+  &__title {
+    color: var(--text-main);
+    margin-bottom: 8px;
+
+    @include typography.h1;
+  }
+
+  &__quantity {
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+
+    @include typography.body-text;
+
+    @include mixins.respond-to('tablet') {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__empty {
+    text-align: center;
+  }
+}

@@ -1,3 +1,19 @@
-.starter {
-  font-size: 18px;
+@use './styles/reset';
+@use './styles/fonts';
+@use './styles/variables' as *;
+@use './styles/mixins';
+@use './styles/typography';
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+body {
+  background-color: var(--page-bg);
+  color: var(--text-main);
+
+  transition: background-color $transition-base, color $transition-base;
 }

@@ -1,0 +1,63 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
+
+.breadcrumbs {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1 / -1;
+
+  @include mixins.respond-to('tablet') {
+    margin-bottom: 40px;
+  }
+
+  &__home {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--text-main);
+
+    transition: color $transition-base;
+
+    @include mixins.hover {
+      color: var(--icon-color);
+    }
+  }
+
+  &__link {
+    @include typography.small-text;
+
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+
+    transition: color $transition-base;
+
+    @include mixins.hover {
+      color: var(--text-main);
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--icon-color);
+  }
+
+  &__link,
+  &__current {
+    @include typography.small-text;
+
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1;
+  }
+}

@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins';
+@use '../../styles/typography';
+
+.notFound {
+  &__emptyContent {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mixins.respond-to('tablet') {
+      flex-direction: row;
+      justify-content: space-around;
+      text-align: left;
+    }
+  }
+
+  &__emptyText {
+    color: var(--text-main);
+
+    @include typography.h2;
+  }
+
+  &__emptyImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 819 / 787;
+  }
+
+  &__back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: color $transition-base;
+
+    @include mixins.hover {
+      color: var(--text-secondary);
+    }
+  }
+}

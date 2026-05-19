@@ -1,0 +1,33 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins';
+
+.toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 100%;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--border);
+  color: var(--text-main);
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition: color $transition-base;
+
+  @include mixins.hover {
+    color: var(--accent);
+  }
+
+  @include mixins.respond-to('desktop') {
+    width: 64px;
+  }
+
+  &__icon {
+    @include mixins.hover-image-scale;
+  }
+}
