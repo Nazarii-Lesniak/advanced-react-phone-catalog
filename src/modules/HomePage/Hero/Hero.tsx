@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
     const interval = setInterval(handleNextBanner, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentIndex]);
 
   const swipeHandlers = useSwipe({
     onSwipedLeft: handleNextBanner,
